@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS authors;
+DROP TABLE IF EXISTS employees;
 
 CREATE TABLE authors (
     author_id INTEGER PRIMARY KEY,
@@ -34,6 +35,16 @@ CREATE TABLE orders (
     order_date DATE NOT NULL
 );
 
+
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    manager_id INT
+);
+
+
 INSERT INTO authors VALUES
 (1, 'R.K. Sharma'),
 (2, 'Anita Verma'),
@@ -61,3 +72,20 @@ INSERT INTO orders VALUES
 (1002, 2, 103, 1, '2026-09-02'),
 (1003, 1, 104, 1, '2026-09-03'),
 (1004, 3, 102, 2, '2026-09-04');
+
+INSERT INTO employees
+(employee_id, employee_name, department, salary, manager_id)
+VALUES
+(101, 'Rajesh', 'Management', 120000, NULL),
+(102, 'Priya', 'HR', 80000, 101),
+(103, 'Amit', 'IT', 90000, 101),
+(104, 'Neha', 'IT', 70000, 103),
+(105, 'Rohit', 'IT', 65000, 103),
+(106, 'Sneha', 'HR', 60000, 102),
+(107, 'Vikas', 'Finance', 85000, 101),
+(108, 'Pooja', 'Finance', 60000, 107);
+
+
+
+
+
