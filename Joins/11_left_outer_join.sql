@@ -1,0 +1,4 @@
+-- LEFT JOIN or LEFT OUTER JOIN
+-- will take everything from the left table 
+-- even if there is no match in the join,
+-- but will only return matches from the right table
