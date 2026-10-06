@@ -1,1 +1,5 @@
+-- Joins
 
+-- combines 2 tables together (or more) if they have a common column.
+-- doesn't mean they need the same column name, but the data in it are the same.
+-- inner joins, outer joins (left, right, full ), cross joins and self joins 
